@@ -141,7 +141,7 @@ nav {
 
 /* Main content */
 main {
-  margin-top: 3.5rem;
+  margin-top: 5rem; /* Increased from 3.5rem to provide more space below fixed header */
   flex: 1;
   padding: 2rem 1rem;
   max-width: var(--max-width);
