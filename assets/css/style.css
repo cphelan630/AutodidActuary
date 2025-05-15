@@ -141,7 +141,7 @@ nav {
 
 /* Main content */
 main {
-  margin-top: 5rem; /* Increased from 3.5rem to provide more space below fixed header */
+  margin-top: 6rem; /* Increased even more to ensure content isn't cut off */
   flex: 1;
   padding: 2rem 1rem;
   max-width: var(--max-width);
@@ -299,6 +299,12 @@ article:last-child {
   text-align: right;
   font-weight: bold;
   color: var(--text-secondary);
+}
+
+/* Page-specific styles */
+body:has(.container h1:first-of-type:contains("CAS Exam Preparation")) main {
+  margin-top: 7rem; /* Extra margin specifically for the CAS Exam Prep page */
+  padding-top: 1rem;
 }
 
 /* Responsive styles */
