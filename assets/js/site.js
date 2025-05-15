@@ -58,4 +58,6 @@ window.addEventListener('resize', () => {
 });
 
 // Initialize theme on page load
-document.addEventListener('DOMContentLoaded', initTheme);
+document.addEventListener('DOMContentLoaded', () => {
+  initTheme();
+});
