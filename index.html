@@ -1,39 +1,174 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>    <meta charset="UTF-8">
+<head>
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <base href="/AutodidActuary/">
-    <title>Autodidactuary - A Digital Garden of Self-Directed Learning</title>
+    <title>AutodidActuary - A Digital Garden of Self-Directed Learning</title>
     <meta name="description" content="AutodidActuary – a digital garden of actuarial self-learning, quotes, and project notes">
     <link rel="icon" type="image/svg+xml" href="assets/img/favicon.svg">
-    <link rel="stylesheet" href="assets/css/style.css">
-    <!-- Font Awesome for GitHub icon -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="assets/css/flusk-style.css">
 </head>
-<body>    <header>
-        <nav aria-label="primary">
-            <a href="index.html" class="logo" aria-label="Homepage">autodidactuary</a>
-            <button id="hamburger" class="hamburger">☰</button>
-            <div id="nav-links" class="nav-links">
-                <a href="books.html">Books</a>
-                <a href="clips.html">Clips</a>
-                <a href="thoughts.html">Thoughts</a>
-                <a href="cas-exam-prep.html">CAS Exam Prep</a>
-                <a href="quotes.html">Quotes</a>
-                <a href="comedy.html">Comedy</a>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar" aria-label="primary">
+        <div class="container navbar-container">
+            <a href="index.html" class="navbar-brand" aria-label="Homepage">
+                Autodidactuary
+            </a>
+            <button class="navbar-toggler" type="button" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="navbar-collapse">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a href="index.html" class="nav-link active">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="books.html" class="nav-link">Books</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="clips.html" class="nav-link">YouTube Clips</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="thoughts.html" class="nav-link">Thoughts</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="cas-exam-prep.html" class="nav-link">CAS Exam Prep</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="quotes.html" class="nav-link">Quotes</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="comedy.html" class="nav-link">Comedy</a>
+                    </li>
+                </ul>
+                <button id="theme-toggle" class="theme-toggle" aria-label="Toggle dark mode">
+                    <i class="fas fa-moon"></i>
+                </button>
             </div>
-            <button id="theme-toggle" class="theme-toggle">🌙</button>
-        </nav>
-    </header>
+        </div>
+    </nav>
 
-    <main class="container">
-        <h1>Welcome to Autodidactuary</h1>
-        
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container hero-content">
+            <h1>Welcome to Autodidactuary</h1>
+            <p>A digital garden of self-directed learning in actuarial science</p>
+            <a href="#main-content" class="btn btn-primary">Explore Content</a>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <main id="main-content">
+        <section class="section">
+            <div class="container">
+                <div class="section-title">
+                    <h2>About This Site</h2>
+                </div>
+                <div class="row">
+                    <div class="col-lg-8 col-md-12 mx-auto">
+                        <div class="card">
+                            <div class="card-body">
+                                <p>
+                                    Welcome to my digital garden of self-directed learning in actuarial science. This site serves as a collection of resources, thoughts, and materials that I've found helpful in my journey of becoming an actuary.
+                                </p>
+                                <p>
+                                    Unlike a traditional blog with chronological posts, this is organized more like a garden — a space where ideas grow over time. Feel free to explore the different sections, from book recommendations to exam preparation resources.
+                                </p>
+                                <p>
+                                    This site is constantly evolving as I continue my learning journey. Check back regularly for new content and updates!
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="container">
+                <div class="section-title">
+                    <h2>Featured Sections</h2>
+                </div>
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="card">
+                            <div class="card-body">
+                                <h3 class="card-title">Reading List</h3>
+                                <p class="card-text">
+                                    Discover books that have shaped my understanding of actuarial science, statistics, and finance.
+                                </p>
+                                <a href="books.html" class="btn btn-primary">View Books</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card">
+                            <div class="card-body">
+                                <h3 class="card-title">CAS Exam Preparation</h3>
+                                <p class="card-text">
+                                    Resources, strategies, and materials for preparing for Casualty Actuarial Society exams.
+                                </p>
+                                <a href="cas-exam-prep.html" class="btn btn-primary">Explore</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card">
+                            <div class="card-body">
+                                <h3 class="card-title">Learning Journal</h3>
+                                <p class="card-text">
+                                    My personal thoughts and reflections on topics in actuarial science and statistics.
+                                </p>
+                                <a href="thoughts.html" class="btn btn-primary">Read More</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
     </main>
 
+    <!-- Footer -->
     <footer>
-        <p>© 2025 Connor Phelan • autodidactuary <a href="https://github.com/username"><i class="fab fa-github"></i></a></p>
-    </footer>    <script src="assets/js/site.js" defer></script>
-    <!-- plausible.io script goes here when analytics enabled -->
+        <div class="container">
+            <div class="footer-content">
+                <div>
+                    <div class="footer-logo">Autodidactuary</div>
+                    <p>A digital garden of self-directed learning in actuarial science.</p>
+                </div>
+                <div>
+                    <h4>Quick Links</h4>
+                    <ul class="footer-nav">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="books.html">Books</a></li>
+                        <li><a href="cas-exam-prep.html">CAS Exam Prep</a></li>
+                        <li><a href="thoughts.html">Thoughts</a></li>
+                    </ul>
+                </div>                <div class="social-links">
+                    <a href="https://github.com/cphelan630" class="social-link" aria-label="GitHub">
+                        <i class="fab fa-github"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Connor Phelan • Autodidactuary</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="assets/js/site.js"></script>
 </body>
 </html>

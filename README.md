@@ -21,6 +21,7 @@ The site serves as both a personal knowledge repository and a public resource fo
 
 This is a static website built with:
 - HTML5, CSS3, and vanilla JavaScript
+- Flusk-inspired template design
 - Mobile-first responsive design
 - Light/dark theme toggle
 - GitHub Pages for hosting

@@ -1,36 +1,11 @@
 /* 
 * Autodidactuary - A digital garden of self-directed learning
-* Main stylesheet - Mobile-first approach
+* Redirect to the new Flusk-based stylesheet
 */
 
-/* CSS Variables for theming */
-:root {
-  /* Light theme (default) */
-  --bg: #ffffff;
-  --bg-secondary: #f8f9fa;
-  --text: #333333;
-  --text-secondary: #6c757d;
-  --link: #0066cc;
-  --link-hover: #2563eb;
-  --border: #e0e0e0;
-  --shadow: rgba(0, 0, 0, 0.1);
-  --nav-active: #e9ecef;
-  --font-body: system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
-  --max-width: 72ch;
-}
+@import url('flusk-style.css');
 
-/* Dark theme */
-[data-theme="dark"] {
-  --bg: #1a1a1a;
-  --bg-secondary: #252525;
-  --text: #f0f0f0;
-  --text-secondary: #bababa;
-  --link: #4da6ff;
-  --link-hover: #80c0ff;
-  --border: #444444;
-  --shadow: rgba(0, 0, 0, 0.3);
-  --nav-active: #333333;
-}
+/* This file now redirects to flusk-style.css for compatibility with existing references */
 
 /* Base styles */
 * {

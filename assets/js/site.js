@@ -1,12 +1,13 @@
 /**
  * Autodidactuary site JavaScript
- * Handles theme toggle and responsive menu functionality
+ * Handles theme toggle and responsive menu functionality for Flusk template
  */
 
 // DOM elements
 const themeToggle = document.getElementById('theme-toggle');
-const hamburgerBtn = document.getElementById('hamburger');
-const navLinks = document.getElementById('nav-links');
+const navbarToggler = document.querySelector('.navbar-toggler');
+const navbarCollapse = document.querySelector('.navbar-collapse');
+const themeIcon = document.querySelector('.theme-toggle i');
 
 // Theme toggle functionality
 function setTheme(theme) {
@@ -14,7 +15,9 @@ function setTheme(theme) {
   localStorage.setItem('theme', theme);
   
   // Update the toggle button icon
-  themeToggle.innerHTML = theme === 'dark' ? '☀️' : '🌙';
+  if (themeIcon) {
+    themeIcon.className = theme === 'dark' ? 'fas fa-sun' : 'fas fa-moon';
+  }
 }
 
 // Initialize theme based on localStorage or system preference
@@ -31,23 +34,38 @@ function initTheme() {
 }
 
 // Theme toggle event listener
-themeToggle.addEventListener('click', () => {
-  const currentTheme = document.documentElement.getAttribute('data-theme');
-  setTheme(currentTheme === 'dark' ? 'light' : 'dark');
-});
+if (themeToggle) {
+  themeToggle.addEventListener('click', () => {
+    const currentTheme = document.documentElement.getAttribute('data-theme');
+    setTheme(currentTheme === 'dark' ? 'light' : 'dark');
+  });
+}
 
-// Mobile hamburger menu toggle
-hamburgerBtn.addEventListener('click', () => {
-  navLinks.classList.toggle('show');
-});
+// Mobile menu toggle
+if (navbarToggler) {
+  navbarToggler.addEventListener('click', () => {
+    navbarCollapse.classList.toggle('show');
+  });
+}
 
-// Close mobile menu when clicking a link
-navLinks.querySelectorAll('a').forEach(link => {
-  link.addEventListener('click', () => {
-    if (window.innerWidth < 640) {
-      navLinks.classList.remove('show');
+// Handle active navigation links
+function setActiveNavLink() {
+  const currentPage = window.location.pathname;
+  document.querySelectorAll('.nav-link').forEach(link => {
+    const linkHref = link.getAttribute('href');
+    if (currentPage.endsWith(linkHref) || 
+        (currentPage.endsWith('/') && linkHref === 'index.html')) {
+      link.classList.add('active');
+    } else {
+      link.classList.remove('active');
     }
   });
+}
+
+// Initialize theme and active navigation when DOM is loaded
+document.addEventListener('DOMContentLoaded', () => {
+  initTheme();
+  setActiveNavLink();
 });
 
 // Close mobile menu when resizing to desktop view
