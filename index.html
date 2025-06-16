@@ -1,173 +1,63 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <base href="/AutodidActuary/">
-    <title>AutodidActuary - A quest to organize my thoughts</title>
-    <meta name="description" content="AutodidActuary – a digital garden of actuarial self-learning, quotes, and project notes">
-    <link rel="icon" type="image/svg+xml" href="assets/img/favicon.svg">
-    
-    <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    
-    <!-- Font Awesome Icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    
-    <!-- Custom CSS -->
-    <link rel="stylesheet" href="assets/css/flusk-style.css">
-</head>
-<body>
-    <!-- Navbar -->
-    <nav class="navbar" aria-label="primary">
-        <div class="container navbar-container">
-            <a href="index.html" class="navbar-brand" aria-label="Homepage">
-                Autodidactuary
-            </a>
-            <button class="navbar-toggler" type="button" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="navbar-collapse">
-                <ul class="navbar-nav">
-                    <li class="nav-item">
-                        <a href="index.html" class="nav-link active">Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="books.html" class="nav-link">Books</a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="clips.html" class="nav-link">YouTube Clips</a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="thoughts.html" class="nav-link">Thoughts</a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="cas-exam-prep.html" class="nav-link">CAS Exam Prep</a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="quotes.html" class="nav-link">Quotes</a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="comedy.html" class="nav-link">Comedy</a>
-                    </li>
-                </ul>
-                <button id="theme-toggle" class="theme-toggle" aria-label="Toggle dark mode">
-                    <i class="fas fa-moon"></i>
-                </button>
-            </div>
+---
+layout: default
+title: Home
+---
+
+<div class="home">
+  <section class="hero">
+    <div class="container">
+      <h1>Welcome to AutodidActuary</h1>
+      <p class="lead">A digital garden of actuarial self-learning, quotes, and project notes</p>
+    </div>
+  </section>
+
+  <section class="main-content">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6">
+          <h2>Latest Posts</h2>
+          <ul class="post-list">
+            {% for post in site.posts %}
+              <li>
+                <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
+                <h3>
+                  <a class="post-link" href="{{ post.url | relative_url }}">{{ post.title }}</a>
+                </h3>
+              </li>
+            {% endfor %}
+          </ul>
         </div>
-    </nav>
 
-    <!-- Hero Section -->
-    <section class="hero">
-        <div class="container hero-content">
-            <h1>Welcome to Autodidactuary</h1>
-            <p>Actuarial student with a ticklish mind. Just trying to organize my thoughts and record some ideas.</p>
-            <a href="#main-content" class="btn btn-primary">Explore Content</a>
+        <div class="col-md-6">
+          <h2>Site Sections</h2>
+          <ul class="section-list">
+            <li>
+              <a href="{{ '/books.html' | relative_url }}">Books</a>
+              <p>Reviews and insights from my reading journey</p>
+            </li>
+            <li>
+              <a href="{{ '/cas-exam-prep.html' | relative_url }}">CAS Exam Prep</a>
+              <p>Resources and tips for actuarial exam preparation</p>
+            </li>
+            <li>
+              <a href="{{ '/quotes.html' | relative_url }}">Quotes</a>
+              <p>Curated quotes that inspire and challenge thinking</p>
+            </li>
+            <li>
+              <a href="{{ '/clips.html' | relative_url }}">YouTube Clips</a>
+              <p>Educational and insightful video content</p>
+            </li>
+            <li>
+              <a href="{{ '/thoughts.html' | relative_url }}">Thoughts</a>
+              <p>Personal reflections on actuarial science and beyond</p>
+            </li>
+            <li>
+              <a href="{{ '/comedy.html' | relative_url }}">Comedy</a>
+              <p>A touch of humor to keep things light</p>
+            </li>
+          </ul>
         </div>
-    </section>
-
-    <!-- Main Content -->
-    <main id="main-content">
-        <section class="section">
-            <div class="container">
-                <div class="section-title">
-                    <h2>About This Site</h2>
-                </div>
-                <div class="row">
-                    <div class="col-lg-8 col-md-12 mx-auto">
-                        <div class="card">
-                            <div class="card-body">
-                                <p>
-                                    My attempt to amalgamate all of the post-it notes, folded-over pages, journal entries, random txt notes, etc. into a single place. 
-                                </p>
-                                <p>
-                                    Main interests at the moment include actuarial science, neural network architectures and optimizers, everything comedy, stoicism, and the Knicks.                                </p>
-                                <p>
-                                    I believe life is an infinity of nodes and edges, and the sheer size of the combinatorial possibilities gives me hope that every experience has potential to lead to one of those jackpot combinations if you can find the sweet spot between agency and gratitude.
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section class="section">
-            <div class="container">
-                <div class="section-title">
-                    <h2>Featured Sections</h2>
-                </div>
-                <div class="row">
-                    <div class="col-md-4">
-                        <div class="card">
-                            <div class="card-body">
-                                <h3 class="card-title">Reading List</h3>
-                                <p class="card-text">
-                                    Books I liked and what I liked about them.
-                                </p>
-                                <a href="books.html" class="btn btn-primary">View Books</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-4">
-                        <div class="card">
-                            <div class="card-body">
-                                <h3 class="card-title">CAS Exam Preparation</h3>
-                                <p class="card-text">
-                                    Next up: Mas-II.
-                                </p>
-                                <a href="cas-exam-prep.html" class="btn btn-primary">Explore</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-4">
-                        <div class="card">
-                            <div class="card-body">
-                                <h3 class="card-title">Thoughts</h3>
-                                <p class="card-text">
-                                    I have a lot of thoughts. Sometimes I write them down and try to make sense of them.
-                                </p>
-                                <a href="thoughts.html" class="btn btn-primary">Read More</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-    </main>
-
-    <!-- Footer -->
-    <footer>
-        <div class="container">
-            <div class="footer-content">
-                <div>
-                    <div class="footer-logo">Autodidactuary</div>
-                    <p>A quest to organize my thoughts.</p>
-                </div>
-                <div>
-                    <h4>Quick Links</h4>
-                    <ul class="footer-nav">
-                        <li><a href="index.html">Home</a></li>
-                        <li><a href="books.html">Books</a></li>
-                        <li><a href="cas-exam-prep.html">CAS Exam Prep</a></li>
-                        <li><a href="thoughts.html">Thoughts</a></li>
-                    </ul>
-                </div>                <div class="social-links">
-                    <a href="https://github.com/cphelan630" class="social-link" aria-label="GitHub">
-                        <i class="fab fa-github"></i>
-                    </a>
-                </div>
-            </div>
-            <div class="footer-bottom">
-                <p>&copy; 2025 Connor Phelan • Autodidactuary</p>
-            </div>
-        </div>
-    </footer>
-
-    <!-- JavaScript -->
-    <script src="assets/js/site.js"></script>
-</body>
-</html>
+      </div>
+    </div>
+  </section>
+</div>

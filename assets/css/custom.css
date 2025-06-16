@@ -1,0 +1,39 @@
+/* Custom styles for AutodidActuary */
+
+/* Add your custom styles here */
+.site-title {
+    font-weight: 600;
+}
+
+.post-list {
+    margin-left: 0;
+    list-style: none;
+}
+
+.post-list > li {
+    margin-bottom: 30px;
+}
+
+.post-meta {
+    font-size: 14px;
+    color: #828282;
+}
+
+.section-list {
+    list-style: none;
+    padding-left: 0;
+}
+
+.section-list > li {
+    margin-bottom: 20px;
+}
+
+.section-list > li > a {
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.section-list > li > p {
+    margin: 5px 0 0;
+    color: #666;
+} 

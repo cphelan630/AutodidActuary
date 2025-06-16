@@ -1,0 +1,15 @@
+title: "AutodidActuary"
+description: "Connor Phelan's essays, projects, and actuarial tools"
+theme: minima
+author: "Connor Phelan"
+minima:
+  header_pages:
+    - cas-exam-prep.html
+    - books.html
+    - quotes.html
+    - clips.html
+    - comedy.html
+    - thoughts.html
+    - index.html
+  custom_css:
+    - assets/css/custom.css 
